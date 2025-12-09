@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Skill extends Model
+class Academic extends Model
 {
     use HasFactory;
 
-    
     protected $fillable = [
-        'name',
-        'category',
-        'level',
+        'degree',
+        'institution',
+        'location',
+        'start_year',
+        'end_year',
+        'result',
+        'description',
     ];
 }

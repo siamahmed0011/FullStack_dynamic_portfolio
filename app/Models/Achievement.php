@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Skill extends Model
+class Achievement extends Model
 {
     use HasFactory;
 
-    
     protected $fillable = [
-        'name',
-        'category',
-        'level',
+        'title',
+        'issuer',
+        'date',
+        'description',
+        'certificate_url',
     ];
 }

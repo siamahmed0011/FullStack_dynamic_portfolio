@@ -1,0 +1,539 @@
+/* =========================
+   Basic reset
+========================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #111827;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   Layout
+========================= */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 3rem;
+}
+
+/* =========================
+   Header / Navigation
+========================= */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+}
+
+.brand-name,
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+/* old .navbar/.nav-inner use korle o kaj korbe */
+.nav-links,
+.nav-inner {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.nav-links a,
+.nav-inner a {
+    color: #4b5563;
+}
+
+.nav-links a:hover,
+.nav-inner a:hover {
+    color: #2563eb;
+}
+
+.active-link {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* =========================
+   Hero section
+========================= */
+.hero {
+    background: radial-gradient(circle at top left, #e0edff, transparent 60%),
+                #f5f7fb;
+    padding: 2.5rem 0 2rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text h1,
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.hero-subtitle,
+.hero p {
+    color: #4b5563;
+    max-width: 480px;
+    line-height: 1.4;
+}
+
+.hero-actions {
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* Avatar circle (optional profile image / letter) */
+.hero-avatar-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-avatar {
+    width: 180px;           
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #e0edff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease,
+                border-color 0.15s ease, transform 0.12s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn-outline,
+.btn-ghost {
+    background: #eef2ff;
+    color: #1e3a8a;
+    border-color: #e5e7eb;
+}
+
+.btn-outline:hover,
+.btn-ghost:hover {
+    background: #e0e7ff;
+}
+
+/* =========================
+   Sections
+========================= */
+.section {
+    padding: 2.5rem 0;
+}
+
+.section-title,
+.section h3,
+.section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+/* =========================
+   Cards (projects, achievements, etc.)
+========================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    padding: 1.3rem 1.4rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    transition: box-shadow 0.15s ease, transform 0.12s ease;
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card-links {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.pill-row {
+    font-size: 0.8rem;
+    color: #2563eb;
+    margin-bottom: 0.4rem;
+}
+
+/* =========================
+   Skills / tags
+========================= */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #e5edff;
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    color: #1e3a8a;
+}
+
+/* Skill cards (skills page) */
+.skill-card {
+    background: #ffffff;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    padding: 1rem 1.25rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-weight: 500;
+}
+
+.skill-category {
+    font-size: 0.8rem;
+    color: #6b7280;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 0.15rem 0.6rem;
+}
+
+/* =========================
+   Achievements list
+========================= */
+.achievement-list {
+    list-style: none;
+    display: grid;
+    gap: 0.4rem;
+}
+
+.achievement-list li {
+    color: #4b5563;
+}
+
+/* =========================
+   Timeline (Academic page)
+========================= */
+.timeline {
+    border-left: 1px solid #d1d5db;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #2563eb;
+    position: absolute;
+    left: -1.8rem;
+    top: 0.3rem;
+}
+
+.timeline-body h4 {
+    margin-bottom: 0.2rem;
+}
+
+/* =========================
+   About page layout
+========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 1.75rem;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    padding: 1.3rem 1.4rem;
+    margin-top: 1rem;
+}
+
+.about-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Utilities
+========================= */
+.muted {
+    color:#111 !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.75rem;
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.link-sm {
+    font-size: 0.9rem;
+    color: #2563eb;
+}
+
+/* Simple bullet list */
+.bullet-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: #4b5563;
+}
+
+.bullet-list li + li {
+    margin-top: 0.25rem;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.footer-inner {
+    padding: 0.9rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .hero-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .nav-links,
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+}
+
+
+.education-wrapper {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.edu-card {
+    padding: 1rem 1.2rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.edu-card:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.edu-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1e3a8a;
+    margin-bottom: 0.4rem;
+}
+
+.edu-item {
+    color: #000;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.edu-muted {
+    color: #000 important;
+    font-size: 0.85rem;
+}
+
+
+/* Contact page layout */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 1.8rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-title {
+    margin-bottom: 1.2rem;
+}
+
+/* Rows */
+.contact-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.contact-value {
+    color: #111827;
+}
+
+/* Links */
+.contact-value a,
+.fb-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-value a:hover,
+.fb-link:hover {
+    text-decoration: underline;
+}
+
+/* Note text */
+.contact-note {
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+
+@media (max-width: 480px) {
+    .contact-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+}
