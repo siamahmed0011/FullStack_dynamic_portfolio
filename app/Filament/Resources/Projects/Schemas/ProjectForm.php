@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Projects\Schemas;
 
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -14,17 +15,26 @@ class ProjectForm
             ->components([
                 TextInput::make('title')
                     ->required(),
+
                 Textarea::make('description')
-                    ->default(null)
-                    ->columnSpanFull(),
+                    ->rows(4)
+                    ->required(),
+
+                FileUpload::make('image')
+    ->disk('public')
+    ->directory('projects')
+    ->image()
+    ->imagePreviewHeight('150')
+    ->nullable(),
+
                 TextInput::make('tech_stack')
-                    ->default(null),
+                    ->required(),
+
                 TextInput::make('github_url')
-                    ->url()
-                    ->default(null),
+                    ->nullable(),
+
                 TextInput::make('demo_url')
-                    ->url()
-                    ->default(null),
+                    ->nullable(),
             ]);
     }
 }

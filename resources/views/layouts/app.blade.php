@@ -34,6 +34,55 @@
         <main class="content container">
             @yield('content')
         </main>
+         
+         
+        <script>
+
+const roles = [
+"Web Developer",
+"Digital Marketer",
+"Frontend Designer",
+"Machine Learning Enthusiast"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+
+current = roles[i];
+
+if(!isDeleting){
+document.getElementById("typing").textContent = current.substring(0,j++);
+}
+else{
+document.getElementById("typing").textContent = current.substring(0,j--);
+}
+
+if(j === current.length + 1){
+isDeleting = true;
+setTimeout(type,1000);
+return;
+}
+
+if(j === 0){
+isDeleting = false;
+i++;
+if(i === roles.length){
+i = 0;
+}
+}
+
+setTimeout(type,80);
+
+}
+
+type();
+
+</script>
+
 
         {{-- Footer --}}
         <footer class="site-footer">
