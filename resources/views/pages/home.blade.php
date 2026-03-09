@@ -9,10 +9,8 @@
             {{-- Left: text --}}
             <div class="hero-text">
                 <p class="eyebrow">Hi, I’m</p>
-                <h1>Shiam Ahmed</h1>
-                <p class="hero-subtitle">
-                    Final-year CSE student skilled in digital marketing, YouTube SEO, and modern web development.
-                </p>
+                <h1>{{ setting('hero_title') }}</h1>
+                <p>{{ setting('hero_description') }}</p>
 
                 <div class="hero-actions">
                     <a href="{{ route('projects') }}" class="btn btn-primary">View My Projects</a>

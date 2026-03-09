@@ -10,42 +10,46 @@ class PortfolioController extends Controller
 {
     public function home()
     {
-        $projects     = Project::latest()->take(3)->get();
-        $skills       = Skill::latest()->take(6)->get();
-       
+        $projects = Project::orderByRaw("CASE WHEN title = 'Food Waste Reduce' THEN 0 ELSE 1 END")
+            ->latest()
+            ->take(3)
+            ->get();
+
+        $skills = Skill::latest()->take(6)->get();
 
         return view('pages.home', compact('projects', 'skills'));
     }
 
     public function academic()
-{
-    $academics = Academic::latest()->get();
-    // or: $academics = Academic::orderByDesc('id')->get();
+    {
+        $academics = Academic::latest()->get();
 
-    return view('pages.academic', compact('academics'));
-}
-
+        return view('pages.academic', compact('academics'));
+    }
 
     public function projects()
     {
         $projects = Project::latest()->get();
+
         return view('pages.projects', compact('projects'));
     }
 
-    public function skills()
-    {
-        $skills = Skill::latest()->get();
-        return view('pages.skills', compact('skills'));
-    }
-
-    public function about()
-    {
-        return view('pages.about');
-    }
-
-    public function contact()
+ public function skills()
 {
-    return view('pages.contact');
+    $skills = Skill::orderBy('id','asc')->get();
+    return view('pages.skills', compact('skills'));
 }
 
+    public function about()
+{
+    $skills = Skill::orderBy('id','asc')->get();   // oldest first
+    $academics = Academic::orderBy('id','asc')->get();
+
+    return view('pages.about', compact('skills','academics'));
+}
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }
