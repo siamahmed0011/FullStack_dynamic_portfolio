@@ -61,7 +61,13 @@ a {
     padding: 0.85rem 0;
 }
 
-.brand-name,
+.brand-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111827;
+    margin-left: 5rem;
+}
+
 .logo {
     font-weight: 700;
     font-size: 1.1rem;
