@@ -7,7 +7,7 @@
     <title>@yield('title', 'Portfolio') | {{ setting('site_name', 'Shiam Ahmed') }}</title>
 
     {{-- Load CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.0.1">
 
 </head>
 
