@@ -1,0 +1,214 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Food Waste Reduce",
+            "description": "A web-based platform focused on reducing food waste by connecting surplus food sources with people or organizations who need it.",
+            "image": "projects\/01KKCJBV2WXFNRTPJGDYFXCT9N.jpg",
+            "tech_stack": "Laravel, PHP, MySQL, HTML, CSS, JavaScript",
+            "github_url": "https:\/\/github.com\/siamahmed0011\/Food_Waste_Web.git",
+            "demo_url": null,
+            "created_at": "2025-11-28T08:11:15.000000Z",
+            "updated_at": "2026-03-10T19:07:47.000000Z"
+        },
+        {
+            "id": 2,
+            "title": "Link Shortener",
+            "description": "A web-based URL shortener application that generates compact links from long URLs for easy sharing and tracking.",
+            "image": "projects\/01KK9Z03QYQHJQY52Z6RPC24KR.jpg",
+            "tech_stack": "Node.js, JavaScript, HTML, CSS",
+            "github_url": "https:\/\/github.com\/siamahmed0011\/link-shortener.git",
+            "demo_url": null,
+            "created_at": "2026-03-06T10:18:15.000000Z",
+            "updated_at": "2026-03-09T18:50:51.000000Z"
+        }
+    ],
+    "skills": [
+        {
+            "id": 2,
+            "name": "Programming & Web",
+            "description": "Python, C, HTML, CSS, Laravel, PHP, JavaScript, Flutter, MySQL, Basic Web Design",
+            "created_at": "2026-03-08T21:47:58.000000Z",
+            "updated_at": "2026-06-06T10:29:44.000000Z"
+        },
+        {
+            "id": 5,
+            "name": "Design & Digital Marketing Skills ",
+            "description": "Canva Graphic Design, Digital Marketing, AI Video Creation, Social Media Content ",
+            "created_at": "2026-03-08T22:02:09.000000Z",
+            "updated_at": "2026-06-06T09:51:47.000000Z"
+        },
+        {
+            "id": 6,
+            "name": "Digital & Office Skills",
+            "description": "Microsoft Office, Google Docs, Google Drive, LinkedIn, Zoom",
+            "created_at": "2026-03-08T22:04:24.000000Z",
+            "updated_at": "2026-06-06T09:53:26.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "Soft Skills",
+            "description": "Teamwork, Communication, Event Coordination, Presentation Skills",
+            "created_at": "2026-03-08T22:04:54.000000Z",
+            "updated_at": "2026-06-06T09:54:33.000000Z"
+        }
+    ],
+    "academics": [
+        {
+            "id": 3,
+            "degree": "Higher Secondary Certificate (HSC)",
+            "institution": "Shahzadpur Govt. College",
+            "year": "2020",
+            "result": "GPA 5.00",
+            "created_at": "2026-03-08T21:04:51.000000Z",
+            "updated_at": "2026-06-06T12:10:11.000000Z"
+        },
+        {
+            "id": 4,
+            "degree": "Secondary School Certificate (SSC)",
+            "institution": "St. Joseph's School & College",
+            "year": "2018",
+            "result": "GPA 5.00",
+            "created_at": "2026-03-08T21:24:39.000000Z",
+            "updated_at": "2026-06-06T12:09:57.000000Z"
+        },
+        {
+            "id": 5,
+            "degree": "B.Sc. in CSE",
+            "institution": "Daffodil International University",
+            "year": "2026",
+            "result": "CGPA 3.44 \/ 4.0",
+            "created_at": "2026-06-06T10:37:12.000000Z",
+            "updated_at": "2026-06-06T11:08:01.000000Z"
+        }
+    ],
+    "achievements": [],
+    "settings": [
+        {
+            "id": 2,
+            "key": "Location",
+            "value": "Mirpur 2, Dhaka, Bangladesh",
+            "created_at": "2026-03-08T20:41:28.000000Z",
+            "updated_at": "2026-03-08T20:42:35.000000Z"
+        },
+        {
+            "id": 3,
+            "key": "Contact_email",
+            "value": "ahmedsiam01608@gmail.com",
+            "created_at": "2026-03-08T20:43:34.000000Z",
+            "updated_at": "2026-06-06T13:07:35.000000Z"
+        },
+        {
+            "id": 4,
+            "key": "Facebook_link",
+            "value": "https:\/\/www.facebook.com\/siam.ahmed.863154\/",
+            "created_at": "2026-03-08T20:44:23.000000Z",
+            "updated_at": "2026-03-08T20:45:32.000000Z"
+        },
+        {
+            "id": 5,
+            "key": "about_intro",
+            "value": "Flutter Developer with hands-on experience building cross-platform mobile apps using Flutter and Firebase. Skilled in UI design, real-time databases, role-based systems, HTML, CSS, and JavaScript. Also proficient in Canva graphic design, AI video creation, and digital marketing. Seeking an entry-level Flutter Developer or Digital Marketing role to deliver impactful results",
+            "created_at": "2026-03-08T20:46:17.000000Z",
+            "updated_at": "2026-06-14T10:32:01.000000Z"
+        },
+        {
+            "id": 6,
+            "key": "department",
+            "value": "CSE",
+            "created_at": "2026-03-08T20:46:58.000000Z",
+            "updated_at": "2026-03-08T20:47:23.000000Z"
+        },
+        {
+            "id": 7,
+            "key": "university",
+            "value": "Daffodil International University",
+            "created_at": "2026-03-08T20:47:57.000000Z",
+            "updated_at": "2026-03-08T20:47:57.000000Z"
+        },
+        {
+            "id": 8,
+            "key": "interests",
+            "value": "Web development, Machine learning, Social marketing\n",
+            "created_at": "2026-03-08T20:50:26.000000Z",
+            "updated_at": "2026-03-08T20:50:48.000000Z"
+        },
+        {
+            "id": 9,
+            "key": "school_name",
+            "value": "St.Joseph's School & College",
+            "created_at": "2026-03-08T20:52:03.000000Z",
+            "updated_at": "2026-03-08T20:52:03.000000Z"
+        },
+        {
+            "id": 10,
+            "key": "ssc_year",
+            "value": "2018\n",
+            "created_at": "2026-03-08T20:52:58.000000Z",
+            "updated_at": "2026-03-08T20:52:58.000000Z"
+        },
+        {
+            "id": 11,
+            "key": "ssc_result",
+            "value": "GPA 5.00\n",
+            "created_at": "2026-03-08T20:53:29.000000Z",
+            "updated_at": "2026-03-08T20:53:29.000000Z"
+        },
+        {
+            "id": 12,
+            "key": "college_name",
+            "value": "Shahzadpur Govt College",
+            "created_at": "2026-03-08T20:53:59.000000Z",
+            "updated_at": "2026-03-08T20:53:59.000000Z"
+        },
+        {
+            "id": 13,
+            "key": "hsc_year",
+            "value": "2020",
+            "created_at": "2026-03-08T20:54:15.000000Z",
+            "updated_at": "2026-03-08T20:54:15.000000Z"
+        },
+        {
+            "id": 14,
+            "key": "hsc_result",
+            "value": "GPA 5.00\n",
+            "created_at": "2026-03-08T20:54:42.000000Z",
+            "updated_at": "2026-03-08T20:56:22.000000Z"
+        },
+        {
+            "id": 15,
+            "key": "hero_title",
+            "value": "Shiam Ahmed",
+            "created_at": "2026-03-08T22:14:17.000000Z",
+            "updated_at": "2026-03-08T22:15:12.000000Z"
+        },
+        {
+            "id": 16,
+            "key": "hero_description",
+            "value": "Flutter Developer & Digital Marketer skilled in building cross-platform mobile apps, Canva graphic design, and modern web development",
+            "created_at": "2026-03-08T22:19:38.000000Z",
+            "updated_at": "2026-06-14T10:30:06.000000Z"
+        },
+        {
+            "id": 17,
+            "key": "site_name",
+            "value": "Shiam Ahmed",
+            "created_at": "2026-03-09T16:47:06.000000Z",
+            "updated_at": "2026-03-09T16:47:06.000000Z"
+        },
+        {
+            "id": 20,
+            "key": "linkedin_url",
+            "value": "https:\/\/www.linkedin.com\/in\/shiamahmed\/",
+            "created_at": "2026-06-06T13:21:37.000000Z",
+            "updated_at": "2026-06-06T13:21:37.000000Z"
+        },
+        {
+            "id": 21,
+            "key": "github_url",
+            "value": "https:\/\/github.com\/siamahmed0011",
+            "created_at": "2026-06-06T13:22:03.000000Z",
+            "updated_at": "2026-06-06T13:22:03.000000Z"
+        }
+    ]
+}
