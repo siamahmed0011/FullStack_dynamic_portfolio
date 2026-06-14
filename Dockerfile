@@ -15,6 +15,9 @@ COPY . .
 # Run composer dump-autoload to regenerate classmaps without triggering Laravel scripts
 RUN composer dump-autoload --no-dev --optimize --no-scripts
 
+# Publish Livewire assets at build time
+RUN php artisan livewire:publish --assets
+
 # Configuration environment variables
 ENV SKIP_COMPOSER 1
 ENV WEBROOT /var/www/html/public
