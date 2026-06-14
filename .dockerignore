@@ -1,0 +1,9 @@
+.git
+.env
+node_modules
+vendor
+.phpunit.result.cache
+tests
+phpunit.xml
+Dockerfile
+.dockerignore
