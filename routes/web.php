@@ -10,3 +10,4 @@ Route::get('/skills', [PortfolioController::class, 'skills'])->name('skills');
 Route::get('/achievements', [PortfolioController::class, 'achievements'])->name('achievements');
 Route::get('/about', [PortfolioController::class, 'about'])->name('about');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact');
+Route::post('/contact', [PortfolioController::class, 'submitContactForm'])->name('contact.submit');

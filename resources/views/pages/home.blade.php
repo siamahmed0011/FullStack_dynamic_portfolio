@@ -12,7 +12,7 @@
             <h1>{{ setting('site_name', 'Shiam Ahmed') }}</h1>
 
             <p class="hero-subtitle">
-                {{ setting('hero_description', 'Final year CSE student skilled in Digital marketing, Youtube SEO and modern Web development.') }}
+                {{ setting('hero_description', 'Flutter Developer & Digital Marketer skilled in building cross-platform mobile apps, Canva graphic design, and modern web development') }}
             </p>
 
             <div class="hero-actions">
@@ -43,7 +43,13 @@
 
                 <h4>{{ $project->title }}</h4>
 
-                <p class="pill-row">{{ $project->tech_stack }}</p>
+                @if(!empty($project->tech_stack))
+                    <div class="tech-pills">
+                        @foreach(explode(',', $project->tech_stack) as $tech)
+                            <span class="tech-pill">{{ trim($tech) }}</span>
+                        @endforeach
+                    </div>
+                @endif
 
                 <p>{{ \Illuminate\Support\Str::limit($project->description, 120) }}</p>
 

@@ -4,23 +4,27 @@
 
 @section('content')
 
-<div class="section">
-    <h2 class="page-title">My Skills</h2>
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
 
-    <div class="skills-grid">
-
-        @forelse($skills as $skill)
-
-        <div class="skill-card">
-            <h4>{{ $skill->name }}</h4>
-            <p class="skill-desc">{{ $skill->description }}</p>
+        <div class="skills-grid">
+            @forelse($skills as $skill)
+                <div class="skill-card">
+                    <h4>{{ $skill->name }}</h4>
+                    @if(!empty($skill->description))
+                        <div class="tech-pills">
+                            @foreach(explode(',', $skill->description) as $item)
+                                <span class="tech-pill">{{ trim($item) }}</span>
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
+            @empty
+                <p class="muted">No skills added yet.</p>
+            @endforelse
         </div>
-
-        @empty
-        <p>No skills added yet.</p>
-        @endforelse
-
     </div>
-</div>
+</section>
 
 @endsection

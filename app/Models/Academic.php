@@ -13,6 +13,7 @@ class Academic extends Model
         'degree',
         'institution',
         'location',
+        'year',
         'start_year',
         'end_year',
         'result',

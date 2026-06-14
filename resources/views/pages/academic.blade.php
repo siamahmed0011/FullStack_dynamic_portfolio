@@ -3,31 +3,30 @@
 @section('title', 'Academic')
 
 @section('content')
-<div class="about-card">
-    <h3>Education</h3>
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title">Academic Journey</h2>
+            <p class="muted mb-1">
+                My educational background and qualifications.
+            </p>
 
-    <div class="education-wrapper">
-
-        <div class="edu-card">
-            <div class="edu-title">University</div>
-            <p class="edu-item">Daffodil International University</p>
-            <p class="edu-muted">Department: CSE</p>
+            <div class="timeline">
+                @forelse($academics as $academic)
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-body">
+                            <span class="tech-pill" style="margin-bottom: 0.5rem; display: inline-block;">Year: {{ $academic->year ?? 'N/A' }}</span>
+                            <h4 style="font-size: 1.15rem; font-weight: 600; color: #111827; margin-bottom: 0.3rem;">{{ $academic->degree }}</h4>
+                            <p style="font-weight: 500; color: #4b5563; margin-bottom: 0.25rem;">{{ $academic->institution }}</p>
+                            @if(!empty($academic->result))
+                                <p style="font-size: 0.88rem; color: #6b7280;">Result: <strong style="color: #111827;">{{ $academic->result }}</strong></p>
+                            @endif
+                        </div>
+                    </div>
+                @empty
+                    <p class="muted">No academic history added yet.</p>
+                @endforelse
+            </div>
         </div>
-
-        <div class="edu-card">
-            <div class="edu-title">College</div>
-            <p class="edu-item">Shahzadpur Govt. College</p>
-            <p class="edu-muted">HSC Passing Year: 2020</p>
-            <p class="edu-muted">Result: GPA 5.00</p>
-        </div>
-
-        <div class="edu-card">
-            <div class="edu-title">School</div>
-            <p class="edu-item">St. Joseph's School & College</p>
-            <p class="edu-muted">SSC Passing Year: 2018</p>
-            <p class="edu-muted">Result: GPA 5.00</p>
-        </div>
-
-    </div>
-</div>
+    </section>
 @endsection

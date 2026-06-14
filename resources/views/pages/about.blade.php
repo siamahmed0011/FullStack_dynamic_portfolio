@@ -12,7 +12,7 @@
 <h2 class="section-title">About</h2>
 
 <p class="muted mb-1">
-{{ setting('about_intro') }}
+{{ setting('about_intro', 'Flutter Developer with hands-on experience building cross-platform mobile apps using Flutter and Firebase. Skilled in UI design, real-time databases, role-based systems, HTML, CSS, and JavaScript. Also proficient in Canva graphic design, AI video creation, and digital marketing. Seeking an entry-level Flutter Developer or Digital Marketing role to deliver impactful results') }}
 </p>
 
 <div class="about-card">
@@ -27,17 +27,18 @@
 </div>
 
 <div class="about-card">
-<h2>Education</h2>
+    <h2>Education</h2>
 
-@foreach($academics as $academic)
-
-<p><strong>{{ $academic->degree }}</strong>: {{ $academic->institution }}</p>
-<p><strong>Year:</strong> {{ $academic->year }}</p>
-<p><strong>Result:</strong> {{ $academic->result }}</p>
-<br>
-
-@endforeach
-
+    <div class="education-wrapper">
+        @if($latestAcademic)
+        <div class="edu-card">
+            <div class="edu-title">{{ $latestAcademic->degree }}</div>
+            <p class="edu-item">{{ $latestAcademic->institution }}</p>
+            <p class="edu-muted"><strong>Year:</strong> {{ $latestAcademic->year }}</p>
+            <p class="edu-muted"><strong>Result:</strong> {{ $latestAcademic->result }}</p>
+        </div>
+        @endif
+    </div>
 </div>
 
 </div>
@@ -45,30 +46,27 @@
 <div>
 
 <div class="about-card">
-<h2>Skills</h2>
+<h2>Skills & Expertise</h2>
 
-<ul class="bullet-list">
+<div style="display: grid; gap: 1rem; margin-top: 1.2rem;">
 @foreach($skills as $skill)
-<li>{{ $skill->name }}</li>
+    <div>
+        <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem; color: #1e3a8a;">{{ $skill->name }}</h4>
+        @if(!empty($skill->description))
+            <div class="tech-pills" style="margin-top: 0.25rem;">
+                @foreach(explode(',', $skill->description) as $item)
+                    <span class="tech-pill" style="margin-bottom: 0.3rem;">{{ trim($item) }}</span>
+                @endforeach
+            </div>
+        @endif
+    </div>
 @endforeach
-</ul>
+</div>
 
 </div>
 
 <div class="about-card">
-<h2>Programming Languages</h2>
-
-<ul class="bullet-list">
-<li>C</li>
-<li>Python</li>
-<li>HTML</li>
-<li>PHP</li>
-</ul>
-
-</div>
-
-<div class="about-card">
-<h2>Contact</h2>
+<h2>Contact Details</h2>
 
 <p><strong>Email:</strong> {{ setting('contact_email') }}</p>
 <p><strong>Location:</strong> {{ setting('location') }}</p>
