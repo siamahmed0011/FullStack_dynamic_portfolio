@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Install composer dependencies at startup (prevents missing vendor errors)
+echo "Installing composer dependencies..."
+composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
 # Run database migrations
 echo "Running database migrations..."
 php /var/www/html/artisan migrate --force
