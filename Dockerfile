@@ -12,8 +12,8 @@ RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoload
 # Copy the rest of the application files
 COPY . .
 
-# Run composer dump-autoload to regenerate classmaps
-RUN composer dump-autoload --no-dev --optimize
+# Run composer dump-autoload to regenerate classmaps without triggering Laravel scripts
+RUN composer dump-autoload --no-dev --optimize --no-scripts
 
 # Configuration environment variables
 ENV SKIP_COMPOSER 1
