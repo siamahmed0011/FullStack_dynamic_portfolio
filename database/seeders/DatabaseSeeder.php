@@ -79,12 +79,8 @@ class DatabaseSeeder extends Seeder
                             'institution' => $academic['institution'],
                         ],
                         [
-                            'location' => $academic['location'] ?? null,
                             'year' => $academic['year'],
-                            'start_year' => $academic['start_year'] ?? null,
-                            'end_year' => $academic['end_year'] ?? null,
                             'result' => $academic['result'] ?? null,
-                            'description' => $academic['description'] ?? null,
                         ]
                     );
                 }
@@ -97,8 +93,9 @@ class DatabaseSeeder extends Seeder
                         ['title' => $achievement['title']],
                         [
                             'issuer' => $achievement['issuer'] ?? null,
-                            'year' => $achievement['year'] ?? null,
+                            'date' => $achievement['date'] ?? null,
                             'description' => $achievement['description'] ?? null,
+                            'certificate_url' => $achievement['certificate_url'] ?? null,
                         ]
                     );
                 }
