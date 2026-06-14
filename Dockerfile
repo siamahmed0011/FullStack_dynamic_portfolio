@@ -1,7 +1,19 @@
 FROM richarvey/nginx-php-fpm:latest
 
-# Copy application files
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy composer files first to leverage Docker cache
+COPY composer.json composer.lock ./
+
+# Install composer dependencies (build time) ignoring platform checks
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts --ignore-platform-reqs
+
+# Copy the rest of the application files
 COPY . .
+
+# Run composer dump-autoload to regenerate classmaps
+RUN composer dump-autoload --no-dev --optimize
 
 # Configuration environment variables
 ENV SKIP_COMPOSER 1
